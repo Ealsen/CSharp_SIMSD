@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Login.Login;
 
 namespace Login
 {
@@ -17,6 +18,8 @@ namespace Login
             InitializeComponent();
         }
 
+
+        // 退出按钮
         private void quit_Click(object sender, EventArgs e)
         {
 
@@ -27,12 +30,16 @@ namespace Login
 
         }
 
+
+        // 管理员按钮
         private void manager_button_Click(object sender, EventArgs e)
         {
             grade_management gm = new grade_management();
             gm.ShowDialog();
         }
 
+
+        // 注销按钮
         private void logout_Click(object sender, EventArgs e)
         {
             Login lg = new Login();
@@ -40,6 +47,8 @@ namespace Login
             this.Visible = false;
         }
 
+
+        // 查询按钮
         private void search_button_Click(object sender, EventArgs e)
         {
             search newsearch = new search();
@@ -59,12 +68,16 @@ namespace Login
             }
         }
 
+
+        // 分析按钮
         private void fenxi_button_Click(object sender, EventArgs e)
         {
             analysis anls = new analysis();
             anls.ShowDialog();
         }
 
+
+        // 统计按钮
         private void tongji_button_Click(object sender, EventArgs e)
         {
             statistics stat = new statistics();
@@ -72,8 +85,32 @@ namespace Login
         }
 
 
+        // 窗体加载事件
+		private void Main_Load(object sender, EventArgs e)
+		{
+            // 使用了一个唯一ID来标识用户，这里直接显示当前登录的用户
+			hello.Text = "你好, 管理员 " + UserSession.LoggedInUser;
+
+		}
 
 
 
-    }
+		private void Header_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void hello_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+
+  //      // 成绩更新按钮——窗口跳转
+		//private void ScoreUpdata_Click(object sender, EventArgs e)
+		//{
+  //          ScoreUpdate su = new ScoreUpdate();
+  //          su.ShowDialog();
+		//}
+	}
 }

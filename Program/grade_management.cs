@@ -21,7 +21,7 @@ namespace Login
             InitializeComponent();
         }
 
-        //序号自动递增
+        //序号自动递增 列表序号自动排序
         private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             Rectangle rectangle = new Rectangle(e.RowBounds.Location.X,
@@ -37,9 +37,9 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string constr = "DataBase = test; Data Source = 127.0.0.1;Port = 3307;User Id=root;Password=jlp1996;pooling=false;CharSet=utf8;";
+            //连接数据库
             MySqlConnection mycon = new MySqlConnection();
-            mycon.ConnectionString = constr;
+            mycon.ConnectionString = DbConfig.ConnectionString;
             mycon.Open();
 
             //查询数据
@@ -70,7 +70,7 @@ namespace Login
                 mycom.ExecuteNonQuery();   //执行语句
             }
             mycon.Close();   //关闭连接
-            mycon.Dispose();  //??释放对象
+            mycon.Dispose();  //释放对象
             int count = this.dataGridView1.RowCount - 1;
 
             MessageBox.Show("录入成功\n已录入成绩"+ count +"人");
@@ -82,6 +82,19 @@ namespace Login
             this.Close();
         }
 
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
 
-    }
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void grade_management_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

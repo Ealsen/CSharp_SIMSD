@@ -15,7 +15,9 @@ namespace Login
         public static ArrayList student_name = new ArrayList();  //存储学生姓名
         public static ArrayList student_class = new ArrayList();  //存储学生班级
         public static ArrayList student_score = new ArrayList();  //存储成绩
+		public static ArrayList only_id = new ArrayList();  //存储成绩
 
 
-    }
+
+	}
 }

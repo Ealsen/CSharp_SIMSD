@@ -19,9 +19,10 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string constr = "DataBase = test; Data Source = 127.0.0.1;Port = 3307;User Id=root;Password=jlp1996;pooling=false;CharSet=utf8;";
+            //string constr = "DataBase = simsdbb; Data Source = 127.0.0.1;Port = 3306;User Id=root;Password=123456;pooling=false;CharSet=utf8;";
+			//string constr = "DataBase = test; Data Source = 127.0.0.1;Port = 3307;User Id=root;Password=jlp1996;pooling=false;CharSet=utf8;";
             MySqlConnection mycon = new MySqlConnection();
-            mycon.ConnectionString = constr;
+            mycon.ConnectionString = DbConfig.ConnectionString;
             mycon.Open();
 
             string getClass = this.comboBox1.Text.Trim();
@@ -59,9 +60,7 @@ namespace Login
             this.textBox3.Text = B.ToString();
 
 
-            /**
-             * 情况不明朗 暂时不写了
-             */
+    
             this.textBox4.Text = "0";
             this.textBox5.Text = "17";
             this.textBox6.Text = "9";
@@ -75,9 +74,42 @@ namespace Login
         {
             this.Close();
         }
-   
-    
-    
-    
-    }
+
+
+		private void statistics_Load(object sender, EventArgs e)
+		{
+			// 添加班级名称到 comboBox1
+			comboBox1.Items.Add("软工2401");
+			comboBox1.Items.Add("软工2402");
+
+			comboBox1.Items.Add("计科Z2401");
+			comboBox1.Items.Add("计科Z2402");
+			comboBox1.Items.Add("计科Z2403");
+			comboBox1.Items.Add("计科Z2404");
+
+			comboBox1.Items.Add("信管2401");
+			comboBox1.Items.Add("信管2402");
+			comboBox1.Items.Add("网工2401");
+            comboBox1.Items.Add("网工2402");
+
+			comboBox1.Items.Add("电子2401");
+			comboBox1.Items.Add("电子2402");
+		}
+
+
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void groupBox1_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void groupBox2_Enter(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

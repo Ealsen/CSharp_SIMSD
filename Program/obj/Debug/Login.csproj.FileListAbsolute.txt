@@ -16,3 +16,5 @@ d:\用户目录\我的文档\visual studio 2012\Projects\Login\Login\bin\Debug\z
 d:\用户目录\我的文档\visual studio 2012\Projects\Login\Login\obj\Debug\Login.search.resources
 d:\用户目录\我的文档\visual studio 2012\Projects\Login\Login\obj\Debug\Login.analysis.resources
 d:\用户目录\我的文档\visual studio 2012\Projects\Login\Login\obj\Debug\Login.statistics.resources
+E:\myDocumentDirections\codeDirections\CSharp_SIMSD-master\Program\obj\Debug\Login.exe
+E:\myDocumentDirections\codeDirections\CSharp_SIMSD-master\Program\obj\Debug\Login.pdb

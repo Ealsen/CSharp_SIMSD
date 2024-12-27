@@ -22,10 +22,11 @@ namespace Login
         {
             //取出select条件
             string s = this.comboBox1.Text.Trim();
+			//string constr = "DataBase = simsdbb; Data Source = 127.0.0.1;Port = 3306;User Id=root;Password=123456;pooling=false;CharSet=utf8;";
 
-            string constr = "DataBase = test; Data Source = 127.0.0.1;Port = 3307;User Id=root;Password=jlp1996;pooling=false;CharSet=utf8;";
-            MySqlConnection mycon = new MySqlConnection();
-            mycon.ConnectionString = constr;
+			//string constr = "DataBase = test; Data Source = 127.0.0.1;Port = 3307;User Id=root;Password=jlp1996;pooling=false;CharSet=utf8;";
+			MySqlConnection mycon = new MySqlConnection();
+            mycon.ConnectionString = DbConfig.ConnectionString;
             mycon.Open();
 
             //查询条件
@@ -36,6 +37,7 @@ namespace Login
             float all = 0, pass = 0, sum = 0, lv, avg;  //前半部分变量定义
 
             float x9 = 0, x8 = 0, x7 = 0, x6 = 0, x0 = 0;  //后半部分变量定义
+            // 等级 90分以上 80分以上 70分以上 60分以上 不及格
             float l9, l8, l7, l6, l0;
             while (read.Read())
             {
@@ -139,5 +141,14 @@ namespace Login
             this.Close();
         }
 
-    }
+		private void groupBox1_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void groupBox2_Enter(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

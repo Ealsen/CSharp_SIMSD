@@ -17,6 +17,9 @@ namespace Login
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
+            //// 打印出当前系统的日期和时间
+            // Console.WriteLine("SIMSDBB！");
+            //Console.WriteLine("The current date and time is: " + DateTime.Now);
         }
     }
 }
